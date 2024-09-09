@@ -3,8 +3,8 @@ string(REPLACE "." "_" curl_version "curl-${VERSION}")
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO curl/curl
-    REF d4240b9bf2a1db4913365143f7b8d0719c774840 # HEAD
-    SHA512 7edf40cb7ddfada6c40716676701951e8eab5dc55edaadadabb602e628fbcbaa8802f64e06586bfb202dcb174659d5b676b402c2a405aa499ca4dcb7b4c9f195
+    REF eb8ad66f6c3eae22d470f0b92e7b2f69447fb496 # HEAD
+    SHA512 8c7ce445bb438591c0d15116052cfaec2d02c742da7970d981c15f48d02732ad07ca3520d0ad2d04a6c6fec9b355a07bd86f04c3f4287b2164c466fe91c8553c
     HEAD_REF master
     PATCHES
         0005_remove_imp_suffix.patch
@@ -13,7 +13,6 @@ vcpkg_from_github(
         export-components.patch
         dependencies.patch
         cmake-config.patch
-        issue-14747.diff  # https://github.com/curl/curl/issues/14747
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
