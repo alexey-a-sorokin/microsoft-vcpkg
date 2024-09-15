@@ -40,11 +40,6 @@ if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
     list(APPEND PATCHES 0002-static-library.patch)
 endif()
 
-# Fix build failures with GCC for built-in modules (https://github.com/microsoft/vcpkg/issues/26573)
-if(VCPKG_TARGET_IS_LINUX)
-    list(APPEND PATCHES 0011-gcc-ldflags-fix.patch)
-endif()
-
 if(VCPKG_TARGET_IS_WINDOWS)
     string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" PYTHON_ALLOW_EXTENSIONS)
     # The Windows 11 SDK has a problem that causes it to error on the resource files, so we patch that.
