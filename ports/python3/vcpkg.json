@@ -1,7 +1,6 @@
 {
   "name": "python3",
-  "version": "3.11.8",
-  "port-version": 4,
+  "version": "3.12.6",
   "description": "The Python programming language",
   "homepage": "https://github.com/python/cpython",
   "license": "Python-2.0",
@@ -54,10 +53,5 @@
       "platform": "windows"
     },
     "zlib"
-  ],
-  "features": {
-    "deprecated-win7-support": {
-      "description": "Deprecated support for the Windows 7 platform -- may be removed at any time."
-    }
-  }
+  ]
 }
